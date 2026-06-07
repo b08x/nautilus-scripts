@@ -1,0 +1,6 @@
+interface:
+  display_name: "Nautilus Scripts"
+  short_description: "Repo-specific patterns and workflows for nautilus-scripts"
+  default_prompt: "Use the nautilus-scripts repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
