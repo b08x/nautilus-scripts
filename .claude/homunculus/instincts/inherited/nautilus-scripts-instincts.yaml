@@ -1,0 +1,387 @@
+# Instincts generated from https://github.com/b08x/nautilus-scripts
+# Generated: 2026-06-07T12:01:52.253Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: nautilus-scripts-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Commit Length
+
+## Action
+
+Keep commit messages concise (~39 characters)
+
+## Evidence
+
+- Average commit message length: 39 chars
+- Based on 6 commits
+
+---
+id: nautilus-scripts-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: nautilus-scripts-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: nautilus-scripts-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: nautilus-scripts-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: nautilus-scripts-workflow-add-new-script-workflow
+trigger: "when doing add new script workflow"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Workflow Add New Script Workflow
+
+## Action
+
+Follow the add-new-script-workflow workflow:
+1. Create new script file in appropriate category directory (e.g., Document/PDF: Tools/...)
+2. Add i18n message for the new script in all .po translation files
+3. Add or update tests for the new script in .helpers/.unit-tests-scripts.sh
+4. Bump version in .common-functions.sh and install.sh
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: Document/PDF: Tools/*, .po/*.po, .po/en_template.pot
+
+---
+id: nautilus-scripts-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct File Naming
+
+## Action
+
+Name the file using camelCase convention
+
+## Evidence
+
+- Pattern in namingConventions.files
+- Consistent with existing files in Document/ and .helpers/
+
+---
+id: nautilus-scripts-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Function Naming
+
+## Action
+
+Name the function using camelCase convention
+
+## Evidence
+
+- Pattern in namingConventions.functions
+- Seen in TypeScript codebase
+
+---
+id: nautilus-scripts-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase convention
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: nautilus-scripts-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: nautilus-scripts-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: nautilus-scripts-instinct-export-style
+trigger: "When exporting functions or classes"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: nautilus-scripts-instinct-test-location
+trigger: "When adding or updating tests"
+confidence: 0.85
+domain: testing
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Test Location
+
+## Action
+
+Place or update test scripts in .helpers/.unit-tests-scripts.sh
+
+## Evidence
+
+- Workflow step: Add or update tests for the new script in .helpers/.unit-tests-scripts.sh
+- Pattern in files: .helpers/.unit-tests-scripts.sh
+
+---
+id: nautilus-scripts-instinct-test-update
+trigger: "When a new script is added"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Test Update
+
+## Action
+
+Add or update corresponding tests in .helpers/.unit-tests-scripts.sh
+
+## Evidence
+
+- Workflow step: Add or update tests for the new script in .helpers/.unit-tests-scripts.sh
+- Example commits: 'feat: add tests for ...'
+
+---
+id: nautilus-scripts-instinct-commit-prefix
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Commit Prefix
+
+## Action
+
+Prefix the commit message with one of: feat, refactor, i18n, chore
+
+## Evidence
+
+- Pattern in commit prefixes
+- Examples: 'feat: add PDF grayscale conversion script'
+
+---
+id: nautilus-scripts-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 39 characters on average
+
+## Evidence
+
+- Pattern in averageLength: 39
+- Example commit messages
+
+---
+id: nautilus-scripts-instinct-add-script-workflow
+trigger: "When someone wants to add a new script/tool to the Nautilus scripts collection"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Add Script Workflow
+
+## Action
+
+Follow the add-new-script-workflow: (1) Create new script in Document/PDF: Tools/, (2) Add i18n message in .po files, (3) Add/update tests in .helpers/.unit-tests-scripts.sh, (4) Bump version in .common-functions.sh and install.sh
+
+## Evidence
+
+- Workflow: add-new-script-workflow
+- Example commits and files involved
+
+---
+id: nautilus-scripts-instinct-i18n-message
+trigger: "When adding a new script"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct I18n Message
+
+## Action
+
+Add a corresponding i18n message for the script in all .po translation files and .po/en_template.pot
+
+## Evidence
+
+- Workflow step: Add i18n message for the new script in all .po translation files
+- Example commits: 'i18n: add message ...'
+
+---
+id: nautilus-scripts-instinct-version-bump
+trigger: "When a new script or significant change is added"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: b08x/nautilus-scripts
+---
+
+# Nautilus Scripts Instinct Version Bump
+
+## Action
+
+Bump the version in .common-functions.sh and install.sh
+
+## Evidence
+
+- Workflow step: Bump version in .common-functions.sh and install.sh
+- Example commit: 'chore: bump version'
+
